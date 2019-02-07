@@ -1,7 +1,4 @@
 export default class Comparator {
-    /**
-     * @param {function(a: *, b: *)} [compareFunction]
-     */
     constructor(compareFunction) {
         this.compare = compareFunction || Comparator.defaultCompareFunction;
     }
