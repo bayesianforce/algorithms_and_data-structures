@@ -52,7 +52,6 @@ export default class LinkedList {
      * @param {*} value
      * @return {LinkedListNode}
      */
-    // eslint-disable-next-line complexity
     delete(value) {
         if (!this.head) {
             return null;
@@ -94,7 +93,6 @@ export default class LinkedList {
      * @param {function} [findParams.callback]
      * @return {LinkedListNode}
      */
-    // eslint-disable-next-line complexity
     find({value = undefined, callback = undefined}) {
         if (!this.head) {
             return null;
