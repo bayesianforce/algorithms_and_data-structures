@@ -3,7 +3,6 @@
  * @param {number} originalB
  * @return {number|null}
  */
-
 export default function euclidean(originalA, originalB) {
     const a = Math.abs(originalA);
     const b = Math.abs(originalB);
