@@ -8,7 +8,6 @@
     "plugins": ["prettier", "security", "jest"],
     "rules": {
         "indent": [2, 4],
-        "complexity": [1, 4],
         "func-names": [2, "always"],
         "max-len": [2, 120],
         "no-alert": 2,
