@@ -1,5 +1,5 @@
 {
-  "name": "-algorithms_an_-data-structures",
+  "name": "algorithms_an_-data-structures",
   "version": "1.0.0",
   "description": "Algorithms and data-structures implemented on JavaScript",
   "main": "index.js",
@@ -7,16 +7,16 @@
   "scripts": {
     "lint": "eslint ./src/*",
     "test": "jest",
-    "check:src": "yarn lint && yarn test -- --coverage"
+    "check:src": "npm run lint && npm run test -- --coverage"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn check:src"
+      "pre-push": "npm run check:src"
     }
   },
   "author": "Valerio Bartolini",
-  "homepage": "https://github.com/trekhleb/javascript-algorithms#readme",
+  "homepage": "https://github.com/bayesianforce/algorithms_and_data-structures#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
