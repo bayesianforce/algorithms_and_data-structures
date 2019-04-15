@@ -1,4 +1,4 @@
-import Sort from '../sort/Sort';
+import Sort from '../Sort';
 
 export default class InsertionSort extends Sort {
     sort(originalArray) {

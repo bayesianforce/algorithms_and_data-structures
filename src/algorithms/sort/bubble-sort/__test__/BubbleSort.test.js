@@ -1,34 +1,34 @@
-import InsertionSort from '../InsertionSort';
+import BubbleSort from '../BubbleSort';
 import {
     equalArr,
     notSortedArr,
     reverseArr,
     sortedArr,
     SortTester,
-} from '../../sort/SortTester';
+} from '../../SortTester';
 
 // Complexity constants.
 const SORTED_ARRAY_VISITING_COUNT = 20;
-const NOT_SORTED_ARRAY_VISITING_COUNT = 101;
-const REVERSE_SORTED_ARRAY_VISITING_COUNT = 210;
+const NOT_SORTED_ARRAY_VISITING_COUNT = 189;
+const REVERSE_SORTED_ARRAY_VISITING_COUNT = 209;
 const EQUAL_ARRAY_VISITING_COUNT = 20;
 
-describe('InsertionSort', () => {
+describe('BubbleSort', () => {
     it('should sort array', () => {
-        SortTester.testSort(InsertionSort);
+        SortTester.testSort(BubbleSort);
     });
 
     it('should sort array with custom comparator', () => {
-        SortTester.testSortWithCustomComparator(InsertionSort);
+        SortTester.testSortWithCustomComparator(BubbleSort);
     });
 
     it('should do stable sorting', () => {
-        SortTester.testSortStability(InsertionSort);
+        SortTester.testSortStability(BubbleSort);
     });
 
     it('should visit EQUAL array element specified number of times', () => {
         SortTester.testAlgorithmTimeComplexity(
-            InsertionSort,
+            BubbleSort,
             equalArr,
             EQUAL_ARRAY_VISITING_COUNT,
         );
@@ -36,7 +36,7 @@ describe('InsertionSort', () => {
 
     it('should visit SORTED array element specified number of times', () => {
         SortTester.testAlgorithmTimeComplexity(
-            InsertionSort,
+            BubbleSort,
             sortedArr,
             SORTED_ARRAY_VISITING_COUNT,
         );
@@ -44,7 +44,7 @@ describe('InsertionSort', () => {
 
     it('should visit NOT SORTED array element specified number of times', () => {
         SortTester.testAlgorithmTimeComplexity(
-            InsertionSort,
+            BubbleSort,
             notSortedArr,
             NOT_SORTED_ARRAY_VISITING_COUNT,
         );
@@ -52,7 +52,7 @@ describe('InsertionSort', () => {
 
     it('should visit REVERSE SORTED array element specified number of times', () => {
         SortTester.testAlgorithmTimeComplexity(
-            InsertionSort,
+            BubbleSort,
             reverseArr,
             REVERSE_SORTED_ARRAY_VISITING_COUNT,
         );
