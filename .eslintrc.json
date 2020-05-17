@@ -25,7 +25,7 @@
         "security/detect-non-literal-regexp": 0,
         "security/detect-non-literal-require": 0,
         "security/detect-object-injection": 0,
-        "prettier/prettier": ["error"],
+        "prettier/prettier": ["error"]
     },
     "globals": {
         "fetch": false
