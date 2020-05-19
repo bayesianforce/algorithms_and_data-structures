@@ -44,7 +44,7 @@ export default class Stack {
     toArray() {
         return this.linkedList
             .toArray()
-            .map(linkedListNode => linkedListNode.value)
+            .map((linkedListNode) => linkedListNode.value)
             .reverse();
     }
 

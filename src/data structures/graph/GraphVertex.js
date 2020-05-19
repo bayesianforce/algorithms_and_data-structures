@@ -34,7 +34,7 @@ export default class GraphVertex {
         const edges = this.edges.toArray();
 
         /** @param {LinkedListNode} node */
-        const neighborsConverter = node => {
+        const neighborsConverter = (node) => {
             return node.value.startVertex === this
                 ? node.value.endVertex
                 : node.value.startVertex;
@@ -46,7 +46,9 @@ export default class GraphVertex {
     }
 
     getEdges() {
-        return this.edges.toArray().map(linkedListNode => linkedListNode.value);
+        return this.edges
+            .toArray()
+            .map((linkedListNode) => linkedListNode.value);
     }
 
     getDegree() {
@@ -55,7 +57,7 @@ export default class GraphVertex {
 
     hasEdge(requiredEdge) {
         const edgeNode = this.edges.find({
-            callback: edge => edge === requiredEdge,
+            callback: (edge) => edge === requiredEdge,
         });
 
         return !!edgeNode;
@@ -63,19 +65,18 @@ export default class GraphVertex {
 
     hasNeighbor(vertex) {
         const vertexNode = this.edges.find({
-            callback: edge =>
-                edge.startVertex === vertex || edge.endVertex === vertex,
+            callback: (edge) => edge.startVertex === vertex || edge.endVertex === vertex,
         });
 
         return !!vertexNode;
     }
 
     findEdge(vertex) {
-        const edgeFinder = edge => {
+        const edgeFinder = (edge) => {
             return edge.startVertex === vertex || edge.endVertex === vertex;
         };
 
-        const edge = this.edges.find({callback: edgeFinder});
+        const edge = this.edges.find({ callback: edgeFinder });
 
         return edge ? edge.value : null;
     }
@@ -85,7 +86,7 @@ export default class GraphVertex {
     }
 
     deleteAllEdges() {
-        this.getEdges().forEach(edge => this.deleteEdge(edge));
+        this.getEdges().forEach((edge) => this.deleteEdge(edge));
 
         return this;
     }

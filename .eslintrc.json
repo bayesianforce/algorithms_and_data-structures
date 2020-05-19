@@ -1,11 +1,11 @@
 {
     "parser": "babel-eslint",
-    "extends": ["airbnb-base", "prettier", "plugin:security/recommended"],
+    "extends": ["airbnb-base","plugin:security/recommended"],
     "env": {
         "es6": true,
         "jest": true
     },
-    "plugins": ["prettier", "security", "jest"],
+    "plugins": ["security", "jest"],
     "rules": {
         "indent": [2, 4],
         "func-names": [2, "always"],
@@ -24,8 +24,7 @@
         "security/detect-non-literal-fs-filename": 0,
         "security/detect-non-literal-regexp": 0,
         "security/detect-non-literal-require": 0,
-        "security/detect-object-injection": 0,
-        "prettier/prettier": ["error"]
+        "security/detect-object-injection": 0
     },
     "globals": {
         "fetch": false

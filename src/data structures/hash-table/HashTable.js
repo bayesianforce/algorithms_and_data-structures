@@ -13,8 +13,7 @@ export default class HashTable {
     // Converts key string to hash number.
     hash(key) {
         const hash = Array.from(key).reduce(
-            (hashAccumulator, keySymbol) =>
-                hashAccumulator + keySymbol.charCodeAt(0),
+            (hashAccumulator, keySymbol) => hashAccumulator + keySymbol.charCodeAt(0),
             0,
         );
 
@@ -25,12 +24,12 @@ export default class HashTable {
     add(key, value) {
         const bucketLinkedList = this.buckets[this.hash(key)];
         const node = bucketLinkedList.find({
-            callback: nodeValue => nodeValue.key === key,
+            callback: (nodeValue) => nodeValue.key === key,
         });
 
         if (!node) {
             // Insert new node.
-            bucketLinkedList.append({key, value});
+            bucketLinkedList.append({ key, value });
         } else {
             // Update value of existing node.
             node.value.value = value;
@@ -40,7 +39,7 @@ export default class HashTable {
     delete(key) {
         const bucketLinkedList = this.buckets[this.hash(key)];
         const node = bucketLinkedList.find({
-            callback: nodeValue => nodeValue.key === key,
+            callback: (nodeValue) => nodeValue.key === key,
         });
 
         if (node) {
@@ -53,7 +52,7 @@ export default class HashTable {
     get(key) {
         const bucketLinkedList = this.buckets[this.hash(key)];
         const node = bucketLinkedList.find({
-            callback: nodeValue => nodeValue.key === key,
+            callback: (nodeValue) => nodeValue.key === key,
         });
 
         return node ? node.value.value : null;

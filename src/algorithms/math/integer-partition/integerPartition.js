@@ -19,16 +19,12 @@ export default function integerPartition(number) {
     for (let summandIndex = 1; summandIndex <= number; summandIndex += 1) {
         for (let numberIndex = 1; numberIndex <= number; numberIndex += 1) {
             if (summandIndex > numberIndex) {
-                partitionMatrix[summandIndex][numberIndex] =
-                    partitionMatrix[summandIndex - 1][numberIndex];
+                partitionMatrix[summandIndex][numberIndex] = partitionMatrix[summandIndex - 1][numberIndex];
             } else {
-                const combosWithoutSummand =
-                    partitionMatrix[summandIndex - 1][numberIndex];
-                const combosWithSummand =
-                    partitionMatrix[summandIndex][numberIndex - summandIndex];
+                const combosWithoutSummand = partitionMatrix[summandIndex - 1][numberIndex];
+                const combosWithSummand = partitionMatrix[summandIndex][numberIndex - summandIndex];
 
-                partitionMatrix[summandIndex][numberIndex] =
-                    combosWithoutSummand + combosWithSummand;
+                partitionMatrix[summandIndex][numberIndex] = combosWithoutSummand + combosWithSummand;
             }
         }
     }

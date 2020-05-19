@@ -93,7 +93,7 @@ export default class LinkedList {
      * @param {function} [findParams.callback]
      * @return {LinkedListNode}
      */
-    find({value = undefined, callback = undefined}) {
+    find({ value = undefined, callback = undefined }) {
         if (!this.head) {
             return null;
         }
@@ -108,8 +108,8 @@ export default class LinkedList {
 
             // If value is specified then try to compare by value..
             if (
-                value !== undefined &&
-                this.compare.equal(currentNode.value, value)
+                value !== undefined
+                && this.compare.equal(currentNode.value, value)
             ) {
                 return currentNode;
             }
@@ -189,7 +189,7 @@ export default class LinkedList {
      */
     toString(callback) {
         return this.toArray()
-            .map(node => node.toString(callback))
+            .map((node) => node.toString(callback))
             .toString();
     }
 }

@@ -7,8 +7,8 @@ export default class InsertionSort extends Sort {
             let currentIndex = i;
             this.callbacks.visitingCallback(array[i]);
             while (
-                array[currentIndex - 1] &&
-                this.comparator.lessThan(
+                array[currentIndex - 1]
+                && this.comparator.lessThan(
                     array[currentIndex],
                     array[currentIndex - 1],
                 )

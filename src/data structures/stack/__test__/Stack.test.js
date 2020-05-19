@@ -53,10 +53,10 @@ describe('Stack', () => {
     it('should be possible to push/pop objects', () => {
         const stack = new Stack();
 
-        stack.push({value: 'test1', key: 'key1'});
-        stack.push({value: 'test2', key: 'key2'});
+        stack.push({ value: 'test1', key: 'key1' });
+        stack.push({ value: 'test2', key: 'key2' });
 
-        const stringifier = value => `${value.key}:${value.value}`;
+        const stringifier = (value) => `${value.key}:${value.value}`;
 
         expect(stack.toString(stringifier)).toBe('key1:test1,key2:test2');
         expect(stack.pop().value).toBe('test2');

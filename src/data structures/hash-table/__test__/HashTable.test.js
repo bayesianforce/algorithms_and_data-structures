@@ -31,7 +31,7 @@ describe('HashTable', () => {
         hashTable.add('c', 'earth');
         hashTable.add('d', 'ocean');
 
-        const stringifier = value => `${value.key}:${value.value}`;
+        const stringifier = (value) => `${value.key}:${value.value}`;
 
         expect(hashTable.buckets[0].toString(stringifier)).toBe('c:earth');
         expect(hashTable.buckets[1].toString(stringifier)).toBe(
@@ -56,7 +56,7 @@ describe('HashTable', () => {
     it('should be possible to add objects to hash table', () => {
         const hashTable = new HashTable();
 
-        hashTable.add('objectKey', {prop1: 'a', prop2: 'b'});
+        hashTable.add('objectKey', { prop1: 'a', prop2: 'b' });
 
         const object = hashTable.get('objectKey');
         expect(object).toBeDefined();

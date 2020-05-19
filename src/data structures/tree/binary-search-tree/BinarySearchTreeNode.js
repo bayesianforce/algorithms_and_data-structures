@@ -55,7 +55,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
             throw new Error('Item not found in the tree');
         }
 
-        const {parent} = nodeToRemove;
+        const { parent } = nodeToRemove;
 
         if (!nodeToRemove.left && !nodeToRemove.right) {
             // Node is a leaf and thus has no children.

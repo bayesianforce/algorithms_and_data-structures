@@ -153,7 +153,7 @@ export class SortTester {
         numberOfVisits,
     ) {
         const visitingCallback = jest.fn();
-        const callbacks = {visitingCallback};
+        const callbacks = { visitingCallback };
         const sorter = new SortingClass(callbacks);
 
         sorter.sort(arrayToBeSorted);
